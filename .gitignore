@@ -1,0 +1,4 @@
+# Execution files
+env/
+__pycache__/
+.idea/
