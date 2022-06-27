@@ -8,9 +8,9 @@ API to translate the interview.
 """
 
 # Core app & Flask imports
-from bson import ObjectId
 import requests
-from flask import Blueprint, render_template, abort, request, make_response
+from bson import ObjectId
+from flask import Blueprint, abort, render_template, request
 
 # Creates the blueprint of the profile view
 profile = Blueprint('profile', __name__)
