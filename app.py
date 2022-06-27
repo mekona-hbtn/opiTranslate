@@ -27,7 +27,6 @@ mongo = MongoClient(uri, serverSelectionTimeoutMS=5000)
 test = mongo['opground_test_db']
 
 
-
 if __name__ == '__main__':
     # Creates the application & register the blueprints
     app = Flask(__name__)
