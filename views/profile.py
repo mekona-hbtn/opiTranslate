@@ -40,9 +40,12 @@ def candidate(id):
         url = 'https://448zpz6x43.execute-api.us-east-1.amazonaws.com/opi/opi'
         translation = {}
         for key, value in interview.items():
-            translate = {"text": value}
-            value_translated = requests.post(url, json=translate).text
-            translation[key] = value_translated.replace('"', '')
+            if value:
+                translate = {"text": value}
+                value_translated = requests.post(url, json=translate).text
+                translation[key] = value_translated.replace('"', '')
+            else:
+                translation[key] = ""
 
         # Saves the translation in the context interview variable
         context['interview'] = translation

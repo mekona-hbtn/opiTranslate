@@ -7,7 +7,7 @@ It selects the database profile techie information to serve in the template.
 """
 
 # Core app & Flask imports
-from flask import Blueprint, abort, render_template, request
+from flask import Blueprint, abort, render_template
 
 # Creates the blueprint of the profile view
 recommendations = Blueprint('recommendations', __name__)
