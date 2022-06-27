@@ -1,26 +1,47 @@
 <h1>Profile</h1>
 
-<h2> Alias: {{ techie['alias'] }}</h2>
+<h2>Alias: {{ techie.alias }}</h2>
 
-<h3> General information and job preferences </h3>
-<p> 
-  <b>Birthdate:</b> {{ techie['birthdate'] }} <br>
-  <b>From:</b> {{ techie['from'] }}
-</p>
-<p> 
-  <b>Work modalities:</b> {{ techie['work_modalities'] }} <br>
-  <b>Full-time:</b> {{ techie['full_time'] }} <br>
-  <b>Part-time:</b> {{ techie['part_time'] }} <br>
-  <b>Freelancer:</b> {{ techie['freelancer'] }} <br>
-  <b>Venture:</b> {{ techie['venture'] }} <br>
-</p>
+<!-- GENERAL INFO BLOCK -->
+<div style='background-color:#ECECEC; padding:10px; margin:10px'>
+  <h3>General information and job preferences</h3>
+  <p>
+    <b>Birthdate:</b> {{ techie.birthdate }} <br />
+    <b>From:</b> {{ techie.from }}
+  </p>
+  <p>
+    <b>Work modalities:</b> {{ techie.work_modalities }} <br />
+    <b>Full-time:</b> {{ techie.full_time }} <br />
+    <b>Part-time:</b> {{ techie.part_time }} <br />
+    <b>Freelancer:</b> {{ techie.freelancer }} <br />
+    <b>Venture:</b> {{ techie.venture }} <br />
+  </p>
+</div>
 
+<!-- INTERVIEW INFO BLOCK -->
+<div style='background-color:#ECECEC; padding:10px; margin:10px'>
+  <h3>Interview</h3>
+  <form action='/profile/{{ techie._id }}' method='POST'>
+    <input type='submit' value='Translate'/>
+  </form>
 
-<h3> Interview </h3>
-<h4> Background: {{ interview['background'] }} </h4>
-<p>
-  <b>Beginnings in the IT world</b><br> {{ interview['beginnings'] }} <br>
-</p>
-<p>
-  <b>Translation:</b> {{ translation['beginnings'] }}
-</p>
+  <h4>Background</h4>
+  <h5>Beginnings in the IT world</h5><p> {{ interview.beginnings }} </p>
+  <h5>Most relevant project</h5><p> {{ interview.relevant_project }} </p>
+  <h5>Most challenging project</h5><p> {{ interview.challengin_project }} </p>
+  <h5>Experience</h5><p> {{ interview.experience }} </p>
+
+  <h4>Professional side</h4>
+  <h5>Work methodologies and tools</h5><p> {{ interview.work_tools }} </p>
+  <h5>Standards of quality</h5><p> {{ interview.quality }} </p>
+
+  <h4>Academic/autodidactic side</h4>
+  <h5>Education</h5><p> {{ interview.education }} </p>
+  <h5>Languages</h5><p> {{ interview.languages }} </p>
+
+  <h4>Professional ambitions</h4>
+  <h5>For the next professional challenge wants...</h5><p> {{ interview.next_challenge}} </p>
+
+  <h4>Hobbies</h4>
+  <p> {{ interview.hobbies }} </p>
+</div>
