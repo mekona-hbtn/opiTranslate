@@ -7,15 +7,18 @@
 
 header {
     display: flex;
+    position: sticky;
+    top: 0px;
     justify-content: space-around;
     height: 15vh;
     align-items: center;
     border-bottom: 3px solid cadetblue;
+    background-color: #ffffff;
 }
 
 .menu li {
     display: inline;
-    font-size: 120%;
+    font-size: 90%;
     font-weight: bold;
     margin: 15px 15px;
 }
@@ -26,8 +29,9 @@ header {
 }
 
 .alias {
+    width: 85%;
+    margin: 20px auto;
     display: block;
-    margin-left: 10%;
 }
 
 .alias h3 {
@@ -54,7 +58,8 @@ span > * {
 }
 
 .general_info, .interview, .interest {
-    margin: 3% 10%;
+    width: 85%;
+    margin: 20px auto;
     border: 2px #cccccc solid;
     border-radius: 15px;
     background-color: #fafafa;
