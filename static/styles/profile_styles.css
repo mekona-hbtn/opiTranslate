@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
@@ -24,8 +24,7 @@ header {
 }
 
 #seeker_profile {
-    font-weight: bold;
-    font-size: 20px;
+    float: right;
 }
 
 .alias {
@@ -72,7 +71,7 @@ span > * {
 }
 
 .titles button {
-    width: 10%;
+    min-width: 10%;
     padding: 10px;
     background-color: #70c3b9;
     border-radius: 50px;
@@ -160,4 +159,8 @@ button:hover {
     width: 35px;
     float: left;
     margin-top: 6px;
+}
+
+.general_info span p {
+    font-size: 80%;
 }

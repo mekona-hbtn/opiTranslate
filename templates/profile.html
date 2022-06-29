@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opground | Recommended profile</title>
-    <link rel="stylesheet" href="./styles/profile_styles.css"/>
+    <link rel="stylesheet" href="../static/styles/profile_styles.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <figure>
-            <img src="./images/opground_logo.png" alt="Opground Logo" width="179" height="41">
+            <img src="../static/images/opground_logo.png" alt="Opground Logo" width="179" height="41">
         </figure>
-        <div id="seeker_profile"><p>Mekoná tech</p></div>
+        <div id="seeker_profile">
+            <img src="../static/images/mekona_logo.png" alt="mekoná logo" height="65">
+        </div>
         <ul class="menu">
             <li>PROFILE</li>
             <li>NEW OFFER</li>
@@ -29,7 +34,7 @@
         <h3>General information</h3>
         <span class="personal_info" >
             <h5>Birthdate:</h5>
-            <p>{{ techie.birthdate }}</p>
+            <p>{{ birthdate }}</p>
         </span>
         <span>
             <h5>From:</h5>
@@ -75,7 +80,9 @@
     <section class="interview">
         <section class="titles">
             <h3>Interview</h3>
-            <button type="sumbit">Translate</button>
+            <form action='/profile/{{ techie._id }}' method='POST'>
+                <button type="sumbit">Translate</button>
+            </form>
         </section>
         <h4>Background</h4>
         <h5>Beginnings in the IT world</h5>
