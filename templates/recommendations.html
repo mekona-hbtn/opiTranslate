@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opground | Recommended</title>
+    <link rel="stylesheet" href="./styles/recommendations_styles.css"/>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="./images/opground_logo.png" alt="Opground Logo" width="179" height="41">
+        </figure>
+        <div id="seeker_profile"><p>Mekoná tech</p></div>
+        <ul class="menu">
+            <li>PROFILE</li>
+            <li>NEW OFFER</li>
+            <li>MY OFFERS</li>
+            <li>BLOG</li>
+        </ul>
+    </header>
+    <div class="recommended">
+      <h1>RECOMMEDED</h1>
+      <p>Desarrollador junior</p>
+    </div>
+    <ul class="candidates_list">
+    {% for candidate in techie %}
+      <a href='/profile/{{ candidate._id }}'>
+        <li class="candidate">
+          <h3>{{ candidate.alias }}</h3>
+          <p>
+            <b>94%</b> of affinity<br>
+            <b>{{ candidate.interview.background }}</b> years of experience<br>
+            Pairs with: <b>developer,junior,inglés</b>
+          </p>
+        </li>
+      </a>
+    {% endfor %}
+    </ul>
+</body>
+</html>
