@@ -23,40 +23,84 @@
     <div class="alias">
         <h3>PROFILE</h3>
         <p>Alias</p>
-        <div id="alias"><p>Opgrounder 0105</p></div>
+        <div id="alias"><p>{{ techie.alias }}</p></div>
     </div>
     <section class="general_info">
         <h3>General information</h3>
-        <span class="personal_info" ><h5>Birthdate:</h5></span>
-        <span><h5>From:</h5></span>
-        <span class="work_modalities"><h5>Work modalities:</h5></span>
-        <span><h5>Full-time:</h5></span>
-        <span><h5>Part-time:</h5></span>
-        <span><h5>Freelancer:</h5></span>
-        <span><h5>Venture:</h5></span>
-        <span class="time_zones"><h5>Times zones of interest for 100% remote:</h5></span>
-        <span class="cities"><h5>Cities of interest for working on-site:</h5></span>
-        <span class="work_permit"><h5>Work permit in Spain:</h5></span>
-        <span><h5>Work permit in USA:</h5></span>
+        <span class="personal_info" >
+            <h5>Birthdate:</h5>
+            <p>{{ techie.birthdate }}</p>
+        </span>
+        <span>
+            <h5>From:</h5>
+            <p>{{ techie.from }}</p>
+        </span>
+        <span class="work_modalities">
+            <h5>Work modalities:</h5>
+            <p>{{ techie.work_modalities }}</p>
+        </span>
+        <span>
+            <h5>Full-time:</h5>
+            <p>{{ techie.full_time }}</p>
+        </span>
+        <span>
+            <h5>Part-time:</h5>
+            <p>{{ techie.part_time }}</p>
+        </span>
+        <span>
+            <h5>Freelancer:</h5>
+            <p>{{ techie.freelancer }}</p>
+        </span>
+        <span>
+            <h5>Venture:</h5>
+            <p>{{ techie.venture }}</p>
+        </span>
+        <span class="time_zones">
+            <h5>Times zones of interest for 100% remote:</h5>
+            <p>{{ techie.time_zones_remote }}</p>
+        </span>
+        <span class="cities">
+            <h5>Cities of interest for working on-site:</h5>
+            <p>{{ techie.interest_cities }}</p>
+        </span>
+        <span class="work_permit">
+            <h5>Work permit in Spain:</h5>
+            <p>{{ techie.work_permit_es }}</p>
+        </span>
+        <span>
+            <h5>Work permit in USA:</h5>
+            <p>{{ work_permit_us }}</p>
+        </span>
     </section>
     <section class="interview">
         <section class="titles">
             <h3>Interview</h3>
-            <button>Translate</button>
+            <button type="sumbit">Translate</button>
         </section>
         <h4>Background</h4>
         <h5>Beginnings in the IT world</h5>
+        <p>{{ interview.beginnings }} </p>
         <h5>Most relevant project</h5>
+        <p>{{ interview.relevant_project }}</p>
         <h5>Most challenging project</h5>
+        <p>{{ interview.challengin_project }}</p>
         <h5>Experience</h5>
+        <p> {{ interview.experience }} </p>
         <h4>Professional side</h4>
         <h5>Work methodologies and tools</h5>
+        <p> {{ interview.work_tools }} </p>
         <h5>Standards of quality</h5>
+        <p> {{ interview.quality }} </p>
         <h4>Academic - Autodidactic side</h4>
         <h5>Education</h5>
+        <p> {{ interview.education }} </p>
+        <h5>Languages</h5>
+        <p> {{ interview.languages }} </p>
         <h4>Professional ambitions</h4>
         <h5>For the next professional challenge wants...</h5>
+        <p> {{ interview.next_challenge}} </p>
         <h4>Hobies</h4>
+        <p> {{ interview.hobbies }} </p>
     </section>
     <section class="interest">
         <h3>ARE YOU INTERESTED?</h3>
