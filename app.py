@@ -27,16 +27,15 @@ mongo = MongoClient(uri, serverSelectionTimeoutMS=5000)
 # Gets the production and test databases
 test = mongo['opground_test_db']
 
+# Creates the application & register the blueprints
+app = Flask(__name__)
+app.register_blueprint(profile)
+app.register_blueprint(recommendations)
+
+@app.route('/', strict_slashes=False)
+def index():
+    return make_response(redirect('/recommendations'))
 
 if __name__ == '__main__':
-    # Creates the application & register the blueprints
-    app = Flask(__name__)
-    app.register_blueprint(profile)
-    app.register_blueprint(recommendations)
-
-    @app.route('/', strict_slashes=False)
-    def index():
-        return make_response(redirect('/recommendations'))
-
     # Start the application
     app.run(port=5000, debug=True)
