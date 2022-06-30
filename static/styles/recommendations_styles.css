@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    border-bottom: 3px solid #70c3b9;
+    background-color: #ffffff;
+}
+
+.menu li {
+    display: inline;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 15px 15px;
+}
+
+#seeker_profile {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.recommended h1 {
+    color: #70c3b9;
+}
+
+.recommended p {
+    font-weight: 700;
+    font-size: 85%;
+    margin-top: 20px;
+}
+
+.recommended {
+    margin: 50px;
+}
+
+.recommended p:before {
+    content: "";
+    display: block;
+    background: url("../images/job_icon.png") no-repeat;
+    height: 30px;
+    width: 25px;
+    float: left;
+}
+
+.candidates_list {
+    width: 90%;
+    margin: auto;
+}
+
+.candidates_list > a {
+    text-decoration: none;
+    color:black;
+}
+
+.candidate {
+    list-style: none;
+    background-color: #eeeeee;
+    border: 1px #dddddd solid;
+    border-radius: 25px;
+    padding: 25px;
+    margin: 15px;
+}
+
+.candidate > * {
+    padding: 10px;
+}
+
+.candidate h3:before {
+    content: "";
+    display: block;
+    background: url("../images/alias_icon.png") no-repeat;
+    height: 30px;
+    width: 25px;
+    float: left;
+}

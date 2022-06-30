@@ -11,6 +11,7 @@ API to translate the interview.
 import requests
 from bson import ObjectId
 from flask import Blueprint, abort, render_template, request
+from datetime import datetime
 
 # Creates the blueprint of the profile view
 profile = Blueprint('profile', __name__)
@@ -23,14 +24,17 @@ def candidate(id):
     # Gets the techi info from the DB by id
     by_id = {'_id': ObjectId(id)}
     techie = test.techie_info.find_one(by_id)
+
     if not techie:
         abort(404)
+
     interview = techie['interview']
 
     # Prepares variables to be available in the context of the template
     context = {
         'techie': techie,
-        'interview': interview,
+        'birthdate': datetime.strftime(techie['birthdate'], '%d %B %Y'),
+        'interview': interview
     }
 
     # Handles the Translate button

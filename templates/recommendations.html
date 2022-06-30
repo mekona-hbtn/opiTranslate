@@ -1,36 +1,47 @@
-<h1>Recommended</h1>
-
-<h2>Desarrollador Junior 2</h2>
-
-<ul>
-  <a href='/profile/{{ techie[0]._id }}' style='text-decoration:none; color:black'>
-    <li style='list-style:none; background-color:#ECECEC; padding:10px; margin:0 10 20 0'>
-      <h3>{{ techie[0].alias }}</h3>
-      <p>
-        <b>94%</b> of affinity<br>
-        <b>{{ techie[0].interview.background }}</b> years of experience<br>
-        Pais with: <b>developer,junior,inglés</b>
-      </p>
-    </li>
-  </a>
-  <a href='/profile/{{ techie[1]._id }}' style='text-decoration:none; color:black'>
-    <li style='list-style:none; background-color:#ECECEC; padding:10px; margin:0 10 20 0'>
-      <h3>{{ techie[1].alias }}</h3>
-      <p>
-        <b>92%</b> of affinity<br>
-        <b>{{ techie[1].interview.background }}</b> years of experience<br>
-        Pais with: <b>developer,junior,inglés</b>
-      </p>
-    </li>
-  </a>
-  <a href='/profile/{{ techie[2]._id }}' style='text-decoration:none; color:black'>
-    <li style='list-style:none; background-color:#ECECEC; padding:10px; margin:0 10 20 0'>
-      <h3>{{ techie[2].alias }}</h3>
-      <p>
-        <b>91%</b> of affinity<br>
-        <b>{{ techie[2].interview.background }}</b> years of experience<br>
-        Pais with: <b>developer,junior,inglés</b>
-      </p>
-    </li>
-  </a>
-</u>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opground | Recommended</title>
+    <link rel="stylesheet" href="../static/styles/recommendations_styles.css"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+    </style>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../static/images/opground_logo.png" alt="Opground Logo" width="179" height="41">
+        </figure>
+        <div id="seeker_profile">
+          <img src="../static/images/mekona_logo.png" alt="mekoná logo" height="65">
+        </div>
+        <ul class="menu">
+            <li>PROFILE</li>
+            <li>NEW OFFER</li>
+            <li>MY OFFERS</li>
+            <li>BLOG</li>
+        </ul>
+    </header>
+    <div class="recommended">
+      <h1>RECOMMEDED</h1>
+      <p>Desarrollador junior</p>
+    </div>
+    <ul class="candidates_list">
+    {% for candidate in techie %}
+      <a href='/profile/{{ candidate._id }}'>
+        <li class="candidate">
+          <h3>{{ candidate.alias }}</h3>
+          <p>
+            <b>94%</b> of affinity<br>
+            <b>{{ candidate.interview.background }}</b> years of experience<br>
+            Pairs with: <b>developer,junior,inglés</b>
+          </p>
+        </li>
+      </a>
+    {% endfor %}
+    </ul>
+</body>
+</html>

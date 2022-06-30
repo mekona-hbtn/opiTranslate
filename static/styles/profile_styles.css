@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    border-bottom: 3px solid #70c3b9;
+    background-color: #ffffff;
+}
+
+.menu li {
+    display: inline;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 15px 15px;
+}
+
+#seeker_profile {
+    float: right;
+}
+
+.alias {
+    width: 85%;
+    margin: 20px auto;
+    display: block;
+}
+
+.alias h3 {
+    font-size: 30px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #70c3b9;
+}
+
+#alias p {
+    padding: 10px;
+    width: 40%;
+    border: 2px #70c3b9 solid;
+    border-radius: 15px;
+}
+
+.general_info > *, .interview > *, .interest > * {
+    margin: 20px;
+}
+
+span > * {
+    margin: 0 40px;
+}
+
+.general_info, .interview, .interest {
+    width: 85%;
+    margin: 20px auto;
+    border: 2px #cccccc solid;
+    border-radius: 15px;
+    background-color: #fafafa;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titles button {
+    min-width: 10%;
+    padding: 10px;
+    background-color: #70c3b9;
+    border-radius: 50px;
+    border: 2px #5a9b93 solid;
+    font-weight: 350;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons button{
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 20px;
+}
+
+.buttons .interested {
+    background-color: #8ccec6;
+    border: 2px #73aca5 solid;
+    font-weight: 700;
+}
+
+.buttons .discard {
+    background-color: #ed6c8a;
+    border: 2px #c45a72 solid;
+    font-weight: 700;
+}
+
+.interest h3 {
+    color: #2b2d43;
+}
+
+button:hover {
+    opacity: 90%;
+}
+
+.personal_info:before {
+    content: "";
+    display: block;
+    background: url("../images/person_icon.png") no-repeat;
+    height: 30px;
+    width: 25px;
+    float: left;
+}
+
+.work_modalities:before {
+    content: "";
+    display: block;
+    background: url("../images/work_icon.png") no-repeat;
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin: 6px 6px 0 0;
+}
+
+.time_zones:before {
+    content: "";
+    display: block;
+    background: url("../images/time_icon.png") no-repeat;
+    height: 30px;
+    width: 25px;
+    float: left;
+}
+
+.cities:before {
+    content: "";
+    display: block;
+    background: url("../images/cities_icon.png") no-repeat;
+    height: 30px;
+    width: 25px;
+    float: left;
+    margin-top: 6px;
+}
+
+.cities:before {
+    content: "";
+    display: block;
+    background: url("../images/permit_icon.png") no-repeat;
+    height: 30px;
+    width: 35px;
+    float: left;
+    margin-top: 6px;
+}
+
+.general_info span p {
+    font-size: 80%;
+}
