@@ -15,7 +15,7 @@ recommendations = Blueprint('recommendations', __name__)
 
 @recommendations.route('/recommendations', strict_slashes=False)
 def job_offer():
-    from app import test
+    from project.db import test
 
     # Gets all the candidates from the DB
     techies = list(test.techie_info.find())
