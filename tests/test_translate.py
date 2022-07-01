@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from translate import translateAPI
+from script.translate import translateAPI
 
 def test_tr1():
     text = {"from": "auto",
