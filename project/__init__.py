@@ -22,5 +22,4 @@ app.register_blueprint(recommendations)
 
 @app.route('/', strict_slashes=False)
 def index():
-    print(app.config)
     return make_response(redirect('/recommendations'))
