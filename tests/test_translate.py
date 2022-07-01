@@ -6,7 +6,7 @@ def test_tr1():
     text = {"from": "auto",
             "to": "en",
             "text": "hola mundo"}
-    assert translateAPI(text) == '"hello world"'
+    assert translateAPI(text) == '"hello worl"'
 
 def test_tr2():
     text = {"from": "auto",
