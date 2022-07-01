@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 
 import requests
-import os
 
 def test_tr1():
-    #text = {"text": "hola mundo"}
-    #URL = os.environ.get('AWS_TRANSLATE')
-    #value_translated = requests.post(URL, json=text).text
-    assert 1 == 1
+    text = {"text": "hola mundo"}
+    URL = 'https://t3i8bk3i2i.execute-api.us-east-1.amazonaws.com/opi/translate'
+    value_translated = requests.post(URL, json=text).text
+    assert value_translated == '"hello world"'
