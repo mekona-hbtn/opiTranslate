@@ -10,8 +10,8 @@ API to translate the interview.
 # Core app & Flask imports
 import requests
 from bson import ObjectId
-from flask import Blueprint, abort, render_template, request
 from datetime import datetime
+from flask import Blueprint, abort, current_app, render_template, request
 
 # Creates the blueprint of the profile view
 profile = Blueprint('profile', __name__)
@@ -19,7 +19,7 @@ profile = Blueprint('profile', __name__)
 
 @profile.route('/profile/<id>', methods=['GET', 'POST'], strict_slashes=False)
 def candidate(id):
-    from app import test
+    from project.db import test
 
     # Gets the techi info from the DB by id
     by_id = {'_id': ObjectId(id)}
@@ -41,12 +41,12 @@ def candidate(id):
     if request.method == 'POST':
 
         # Requests the interview translation to AWS Translate API
-        url = 'https://448zpz6x43.execute-api.us-east-1.amazonaws.com/opi/opi'
+        URL = current_app.config['AWS_TRANSLATE']
         translation = {}
         for key, value in interview.items():
             if value:
                 translate = {"text": value}
-                value_translated = requests.post(url, json=translate).text
+                value_translated = requests.post(URL, json=translate).text
                 translation[key] = value_translated.replace('"', '')
             else:
                 translation[key] = ""
