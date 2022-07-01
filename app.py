@@ -10,6 +10,10 @@ Please follow the instructions in the README file to run this app.
 """
 from project import app
 
+# Creates the application & register the blueprints
+app = Flask(__name__)
+app.register_blueprint(profile)
+app.register_blueprint(recommendations)
 
 if __name__ == '__main__':
     # Start the application
