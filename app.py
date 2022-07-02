@@ -8,7 +8,14 @@ environment that has installed the libraries of the file `requirements.txt`.
 
 Please follow the instructions in the README file to run this app.
 """
-from project import app
+from project import create_app
+from dotenv import load_dotenv
+
+load_dotenv('.env') 
+
+app = create_app()
+
+
 
 if __name__ == '__main__':
     # Start the application
