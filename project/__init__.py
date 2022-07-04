@@ -13,12 +13,12 @@ from flask import Flask, make_response, redirect
 from .views.profile import profile
 from .views.recommendations import recommendations
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object('config.Config')
     app.register_blueprint(profile)
     app.register_blueprint(recommendations)
-
 
     @app.route('/', strict_slashes=False)
     def index():

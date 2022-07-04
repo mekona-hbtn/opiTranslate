@@ -15,10 +15,10 @@ recommendations = Blueprint('recommendations', __name__)
 
 @recommendations.route('/recommendations', strict_slashes=False)
 def job_offer():
-    from project.db import test
+    from project.db import db
 
     # Gets all the candidates from the DB
-    techies = list(test.techie_info.find())
+    techies = list(db.techie_info.find())
     if not techies:
         abort(404)
 

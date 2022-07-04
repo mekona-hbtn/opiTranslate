@@ -16,9 +16,9 @@ mongo = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
 # Gets the production and test databases
 FLASK_ENV = app.config['ENV']
 
-#if FLASK_ENV == 'production':
-#    app.config.from_object('config.ProductionConfig')
-#    production = mongo[app.config['DB_NAME']]
-#else:
-app.config.from_object('config.DevelopmentConfig')
-test = mongo[app.config['DB_NAME']]
+if FLASK_ENV == 'production':
+    app.config.from_object('config.ProductionConfig')
+    db = mongo[app.config['DB_NAME']]
+else:
+    app.config.from_object('config.DevelopmentConfig')
+    db = mongo[app.config['DB_NAME']]

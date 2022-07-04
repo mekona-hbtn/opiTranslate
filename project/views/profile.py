@@ -19,11 +19,11 @@ profile = Blueprint('profile', __name__)
 
 @profile.route('/profile/<id>', methods=['GET', 'POST'], strict_slashes=False)
 def candidate(id):
-    from project.db import test
+    from project.db import db
 
     # Gets the techi info from the DB by id
     by_id = {'_id': ObjectId(id)}
-    techie = test.techie_info.find_one(by_id)
+    techie = db.techie_info.find_one(by_id)
 
     if not techie:
         abort(404)
