@@ -8,20 +8,20 @@
 
 ## opiTranslate
 
-Opground's platform was born to connect talent from all over the world. At first, they decided to go for Spanish and Latin American talent to connect them with Spanish companies. But new companies from the United States and other countries have been using Opground and expect to see interviews in English.
+Opground's platform was born to connect talent from all over the world. At first, they decided to go for Spanish and Latin American talent to connect them with Spanish companies. However, new companies from the United States and other countries have been using Opground and now expect to see interviews in English.
 
-This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from preferences to English and any other language. For this, a back-end is developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline is also implemented to automate the integration of basic software testing with Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginex to the domain [www.opitranslate.holbie3815.tech]()
+This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from any language preference to English or any other language. For this, a back-end was developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline was also implemented to automate the integration of basic software testing using Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginx. You can visit the site at [www.opitranslate.holbie3815.tech]()
 
 ## Overview
 
-The Holberton School teaches Computer Science Fundamentals with a project-based approach. This Capstone Project covers the high-level programming skills with emphasis on backend, frontend, cloud and devops acquired during the three trimesters of the program. It is developed under the guidance and supervision of the startup Opground.
+The Holberton School teaches Computer Science Fundamentals with a project-based approach. This Capstone Project covers the high-level programming skills with emphasis on backend, frontend, cloud and devops acquired during the three trimesters of the program. It is developed under the guidance and supervision of the startup [Opground](https://opground.com/).
 
 ## Requirements
 
 - [Python 3+](https://python.org/) installed on the system
-- Write basic commands on a terminal window (macOS, Linux or Windows)
+- Able to write basic commands on a terminal window (macOS, Linux or Windows)
 
-To run the app you need to download the code files by clicking [Download opiTranslate](https://github.com/mekona-hbtn/opiTranslate/archive/refs/heads/main.zip). Or by cloning this repository with the following command in your command terminal. The result will be the same regardless of the option you choose.
+To run the app you'll need to download the code files by clicking [Download opiTranslate](https://github.com/mekona-hbtn/opiTranslate/archive/refs/heads/main.zip) or by cloning this repository with the following command in your command terminal. The result will be the same regardless of the option you choose.
 
 ```bash
 ~$ git clone https://github.com/mekona-hbtn/opiTranslate.git
@@ -69,11 +69,8 @@ Before running the application be sure to set the following environment variable
 Now we are ready to run opiTranslate typing the flask run command:
 
 ```bash
-# macOS or Linux
+# macOS, Linux or PowerShell
 (venv) ~/opiTranslate$ flask run
-
-# PowerShell
-(venv) ~\opiTranslate$ flask run
 ```
 
 <br>
