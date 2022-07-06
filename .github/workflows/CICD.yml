@@ -34,7 +34,23 @@ jobs:
     - name: build and push to docker
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: felipeleon94/mekona
+        image: ${{ secrets.DOCKER_IMAGE }}
+        tags: latest
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: SSH to clone and deploy
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          sudo docker stop $(sudo docker ps -a -q)
+          sudo docker rm $(sudo docker ps -a -q)
+          sudo docker rmi $(sudo docker images -q)
+          sudo docker pull ${{ secrets.DOCKER_IMAGE }}
+          sudo docker run -dp 5000:5000 ${{ secrets.DOCKER_IMAGE }}
+          sudo service opitranslate restart
+          sudo service nginx restart
