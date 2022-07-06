@@ -50,6 +50,6 @@ jobs:
           sudo docker rm $(sudo docker ps -a -q)
           sudo docker rmi $(sudo docker images -q)
           sudo docker pull ${{ secrets.DOCKER_IMAGE }}
-          sudo docker run -p 5000:5000 ${{ secrets.DOCKER_IMAGE }}
+          sudo docker run -dp 5000:5000 ${{ secrets.DOCKER_IMAGE }}
           sudo service opitranslate restart
           sudo service nginx restart
