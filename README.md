@@ -10,7 +10,7 @@
 
 Opground's platform was born to connect talent from all over the world. At first, they decided to go for Spanish and Latin American talent to connect them with Spanish companies. However, new companies from the United States and other countries have been using Opground and now expect to see interviews in English.
 
-This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from any language preference to English or any other language. For this, a back-end was developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline was also implemented to automate the integration of basic software testing using Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginx. You can visit the site at [www.opitranslate.holbie3815.tech]()
+This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from any language preference to English or any other language. For this, a back-end was developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline was also implemented to automate the integration of basic software testing using Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginx. You can visit the site at [opitranslate.holbie3815.tech](http://opitranslate.holbie3815.tech)
 
 ## Overview
 
