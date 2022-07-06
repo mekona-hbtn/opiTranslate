@@ -1,6 +1,6 @@
 <br>
 
-<h1 align="center"><img src="https://i.ibb.co/JKk0jcM/image.png" width='130'><br>opiTranslate</h1>
+<h1 align="center"><img src="https://i.ibb.co/vBRcBgB/mekona.png" width='200'><br>opiTranslate</h1>
 
 <p align="center"><img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"><img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"><img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white"><img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"><img src="https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white"></p>
 
@@ -10,7 +10,7 @@
 
 Opground's platform was born to connect talent from all over the world. At first, they decided to go for Spanish and Latin American talent to connect them with Spanish companies. However, new companies from the United States and other countries have been using Opground and now expect to see interviews in English.
 
-This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from any language preference to English or any other language. For this, a back-end was developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline was also implemented to automate the integration of basic software testing using Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginx. You can visit the site at [opitranslate.holbie3815.tech](http://opitranslate.holbie3815.tech)
+This is how opiTranslate was born, as a solution within the web site in which companies can translate the interviews of their candidates from any language preference to English or any other language. For this, a back-end was developed with Python and Flask that connects with the AWS Translate API service, and a front-end that preserves the Opground graphical interface. The DevOps pipeline was also implemented to automate the integration of basic software testing using Docker and GitHub Actions, as well as the automation of the application deployment with AWS EC2 and Nginx. You can visit the site at [opiTranslate](http://opitranslate.holbie3815.tech)
 
 ## Overview
 
